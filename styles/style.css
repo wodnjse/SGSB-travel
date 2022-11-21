@@ -1,0 +1,35 @@
+/* @import "reset.css"; */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    /* font-weight: 400; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+div, section, header, footer, p, h1 {
+    box-sizing: border-box;
+}
+
+.global-width {
+    font-weight: 100;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    font-family: 'Pretendard-Regular';
+    font-weight: 700;
+}
+
+#main-title {
+    font-family: 'Pretendard-Bold';
+}
