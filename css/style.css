@@ -5,12 +5,15 @@ div, section, header, footer, p, h1 {
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
     font-family: 'Pretendard'
 }
 
 .global-width {
-    font-weight: 100;
     max-width: 1700px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -20,8 +23,41 @@ header {
     font-weight: 700;
 }
 
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+.img-container {
+    width: 100%;
+}
+
+img {
+    width: 100vw;
+    display: block;
+
+}
+
 #main-title {
+    transform: translate(50%, 50%);
+    top: 50%;
+    left: 50%;
     font-weight: 800;
+    position: absolute;
+}
+
+#main-title p {
+    color: #fff;
+    font-size: 7rem;
+}
+
+#headline {
+    font-size: 2rem;
 }
 
 #subtitle {
