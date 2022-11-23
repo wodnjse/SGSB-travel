@@ -1,7 +1,7 @@
 /* @import "reset.css"; */
 @import "fonts.css";
 
-div, section, header, footer, p, h1 {
+div, section, header, footer, p, h1, h2, h3 {       
     box-sizing: border-box;
 }
 
@@ -10,7 +10,8 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    font-family: 'Pretendard'
+    font-family: 'Pretendard';
+    font-size: 16px;
 }
 
 .global-width {
@@ -56,8 +57,31 @@ img {
     font-size: 7rem;
 }
 
+.main-module-container {
+    margin: 6vw 0 2vw;
+}
+
 #headline {
     font-size: 2rem;
+}
+
+.card-container {
+    display: flex;
+}
+
+.main-city-card {
+    width: 250px;
+    height: 333px;
+    margin-right: 20px;
+    padding: 32px 24px;
+    background-color: bisque;
+    border-radius: 16px;
+}
+
+.main-city-card-title {
+    /*텍스트 default 여백 없앰*/
+    margin: 0 0 8px; 
+    font-size: 2rem ;
 }
 
 #subtitle {
