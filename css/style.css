@@ -18,13 +18,8 @@ html, body {
     font-size: 16px;
 }
 
-.global-width {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
 
-#main-header h1{
+#logo{
     font-weight: 900;
     text-align: center;
 }
@@ -39,10 +34,39 @@ html, body {
     justify-content: center;
 }
 
+.img-container {
+    width: 100%;
+    height: max-content;
+}
+
+#main-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    /* border-bottom: #fff 1px solid; */
+}
+
+#logo {
+    color: #fff;
+    /* display: inline-block; */
+    font-weight: 700;
+}
+
+#mainImage {
+    width: 100%;
+    display: block;
+    filter: brightness(70%);
+    /* margin: 0 auto; */
+}
+
 #main-title {
-    transform: translate(50%, 50%);
+    /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    box-sizing: border-box;
     font-weight: 800;
     position: absolute;
     display: inline-block;
@@ -60,20 +84,15 @@ html, body {
     font-size: 10rem;
 }
 
-#seoul:hover section > .img-container{
-    background-image: url(../img/photo-1578037571214-25e07ed4a487.avif);
+#seoul:hover section > .img-container img{
+    background: url(../img/photo-1578037571214-25e07ed4a487.avif);
 }
 
-.img-container {
-    width: 100%;
-    height: max-content;
+.global-width {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
-
-#mainImage {
-    width: 100%;
-    display: block;
-}
-
 
 .main-module-container {
     margin: 6vw 0 2vw;
