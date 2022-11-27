@@ -52,7 +52,7 @@ img {
     position: absolute;
 }
 
-#main-title p {
+#main-title span {
     color: #fff;
     font-size: 7rem;
 }
@@ -65,14 +65,15 @@ img {
     font-size: 2rem;
 }
 
-.card-container {
+.card-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .main-city-card {
-    width: 250px;
-    height: 333px;
-    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+    justify-content: space-around;
     padding: 32px 24px;
     background-color: bisque;
     border-radius: 16px;
