@@ -8,14 +8,14 @@ def get_d():
     with open('./json/seoul.json','r',encoding='utf-8') as f:
         return json.loads(f.read())
 
-@app.get('/data/sc')
+@app.get('/data/gyeonggi')
 def get_d():
-    with open('./json/sc.json','r',encoding='utf-8') as f:
+    with open('./json/gyeonggi.json','r',encoding='utf-8') as f:
         return json.loads(f.read())
 
-@app.get('/data/gd')
+@app.get('/data/sokcho')
 def get_d():
-    with open('./json/gd.json','r',encoding='utf-8') as f:
+    with open('./json/sokcho.json','r',encoding='utf-8') as f:
         return json.loads(f.read())
 
 @app.get('/data/busan')
