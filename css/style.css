@@ -119,6 +119,12 @@ html, body {
     background-size: 100%;
     background-repeat: no-repeat;
     box-shadow: inset 10px rgba(0, 0, 0, 0.8);
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.main-city-card:hover {
+    transform: scale(1.03);
 }
 
 #card-seoul {
