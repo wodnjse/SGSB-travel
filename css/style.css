@@ -56,6 +56,7 @@ html, body {
 
 #mainImage {
     width: 100%;
+    height: 100vh;
     display: block;
     filter: brightness(70%);
     /* margin: 0 auto; */
@@ -124,7 +125,7 @@ html, body {
 }
 
 .main-city-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 #card-seoul {
