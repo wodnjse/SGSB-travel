@@ -22,34 +22,39 @@
             <span class="main-title-element" id="sokcho">속</span>
             <span class="main-title-element" id="busan">부</span>
         </div>
-        <div class="global-width">
+        <div class="global-width">  
             <div class="main-module-container">
                 <h2 id="headline">국내 대표 여행지</h2>
                 <div class="card-wrapper">
-                    <div class="main-city-card" id="card-seoul">
+                    <div class="main-city-card" id="card-seoul" onclick="se_load()">
                         <h3 class="main-city-card-title">서울</h3>
                         <div class="main-city-card-desc">한국의 심장</div>
                     </div>
-                    <div class="main-city-card" id="card-gyeonggi">
+                    <div class="main-city-card" id="card-gyeonggi" onclick="gd_load()">
                         <h3 class="main-city-card-title">경기</h3>
                         <div class="main-city-card-desc">시작합니다!</div>
                     </div>
-                    <div class="main-city-card" id="card-sokcho">
+                    <div class="main-city-card" id="card-sokcho" onclick="sc_load()">
                         <h3 class="main-city-card-title">속초</h3>
                         <div class="main-city-card-desc">자연 그대로의 아름다움</div>
                     </div>
-                    <div class="main-city-card" id="card-busan">
+                    <div class="main-city-card" id="card-busan" onclick="busan_load()">
                         <h3 class="main-city-card-title">부산</h3>
                         <div class="main-city-card-desc">바다의 도시</div>  
                     </div>
                 </div>  
-            </div>      
+            </div>
+            <div class="list-container">
+                <ul id="listElement">
+
+                </ul>
+            </div>
         </div>
         <footer>
             
         </footer>   
     </section>
-    <script src="./script.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
