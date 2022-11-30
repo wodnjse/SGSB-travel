@@ -154,6 +154,10 @@ html, body {
     color: #fff;
 }
 
+.auction-row {
+    background-color: aquamarine;
+}
+
 footer {
     width: 100%;
     height: 400px;
