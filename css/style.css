@@ -99,7 +99,8 @@ html, body {
     margin: 6vw 0 2vw;
 }
 
-#headline {
+.headline {
+    margin: 50px 0 30px;
     font-weight: 800;
     font-size: 2.5rem;
 }
@@ -119,13 +120,14 @@ html, body {
     border-radius: 16px;
     background-size: 100%;
     background-repeat: no-repeat;
-    box-shadow: inset 10px rgba(0, 0, 0, 0.8);
+    /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
     transition: transform .2s;
     cursor: pointer;
 }
 
 .main-city-card:hover {
     transform: scale(1.02);
+
 }
 
 #card-seoul {
@@ -154,8 +156,17 @@ html, body {
     color: #fff;
 }
 
+.list-container {
+    width: max-content;
+}
+
+
 .auction-row {
+    cursor: pointer;
     background-color: aquamarine;
+    width: 60vw;
+    /* ::marker 없앰 */
+    list-style: none;
 }
 
 footer {
