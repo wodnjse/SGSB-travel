@@ -1,6 +1,11 @@
 /* @import "reset.css"; */
 @import "fonts.css";
 
+:root {
+    font-family: 'Pretendard';
+    --color-white: #fff;
+}
+
 div, section, header, footer, p, h1, h2, h3 {       
     box-sizing: border-box;
 }
@@ -14,10 +19,8 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    font-family: 'Pretendard';
     font-size: 16px;
 }
-
 
 #logo{
     font-weight: 900;
@@ -49,7 +52,7 @@ html, body {
 }
 
 #logo {
-    color: #fff;
+    color: var(--color-white);
     /* display: inline-block; */
     font-weight: 700;
 }
@@ -81,7 +84,7 @@ html, body {
 }
 
 #main-title span:hover {
-    color: #fff;
+    color: var(--color-white);
     font-size: 10rem;
 }
 
@@ -121,13 +124,14 @@ html, body {
     background-size: 100%;
     background-repeat: no-repeat;
     /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
-    transition: transform .2s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform ease-out .2s;
     cursor: pointer;
 }
 
 .main-city-card:hover {
     transform: scale(1.02);
-
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 #card-seoul {
@@ -148,25 +152,38 @@ html, body {
     margin: 0 0 8px; 
     font-size: 2rem ;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .main-city-card-desc {
     font-size: 1.2rem;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .list-container {
     width: max-content;
 }
 
-
 .auction-row {
     cursor: pointer;
-    background-color: aquamarine;
     width: 60vw;
     /* ::marker 없앰 */
     list-style: none;
+    border-top: solid 1px #cecece;
+}
+
+.auctionID, .auctionAddress {
+    margin: 0;
+}
+
+.auctionID {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+.auctionAddress {
+    margin: 0 0 10px;
 }
 
 footer {
