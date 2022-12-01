@@ -27,33 +27,47 @@
             <div class="main-module-container">
                 <h2 class="headline">국내 대표 여행지</h2>
                 <div class="card-wrapper">
-                    <div class="main-city-card" id="card-seoul" onclick="loadSeoul()">
+                    <div class="main-city-card" id="cardSeoul">
                         <h3 class="main-city-card-title">서울</h3>
                         <div class="main-city-card-desc">한국의 심장</div>
                     </div>
-                    <div class="main-city-card" id="card-gyeonggi" onclick="loadGyeonggi()">
+                    <div class="main-city-card" id="cardGyeonggi">
                         <h3 class="main-city-card-title">경기</h3>
                         <div class="main-city-card-desc">시작합니다!</div>
                     </div>
-                    <div class="main-city-card" id="card-sokcho" onclick="loadSokcho()">
+                    <div class="main-city-card" id="cardSokcho">
                         <h3 class="main-city-card-title">속초</h3>
                         <div class="main-city-card-desc">자연 그대로의 아름다움</div>
                     </div>
-                    <div class="main-city-card" id="card-busan" onclick="loadBusan()">
+                    <div class="main-city-card" id="cardBusan">
                         <h3 class="main-city-card-title">부산</h3>
                         <div class="main-city-card-desc">바다의 도시</div>
                     </div>
-                </div>  
+                </div>
             </div>
+            <h2 class="headline"> 대표 명소</h2>
             <div class="list-container">
-                <h2 class="headline"> 대표 명소</h2>
+                <div class="tag-container">
+                    <div class="tag" id="tagSeoul" onclick="loadCity('seoul')">
+                        <div class="tag-name">서울</div>
+                    </div>
+                    <div class="tag" id="tagGyeonggi" onclick="loadCity('gyeonggi')">
+                        <div class="tag-name">경기</div>
+                    </div>
+                    <div class="tag" id="tagSokcho" onclick="loadCity('sokcho')">
+                        <div class="tag-name">속초</div>
+                    </div>
+                    <div class="tag" id="tagBusan" onclick="loadCity('busan')">
+                        <div class="tag-name">부산</div>
+                    </div>
+                </div>
                 <ul id="listElement">
                 </ul>
             </div>
         </div>
         <footer>
-            
-        </footer>   
+
+        </footer>
     </section>
     <script src="./index.js"></script>
 </body>
