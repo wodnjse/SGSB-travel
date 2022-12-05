@@ -1,26 +1,40 @@
 /* @import "reset.css"; */
 @import "fonts.css";
 
-div, section, header, footer, p, h1 {
-    box-sizing: border-box;
+:root {
+    font-family: 'Pretendard';
+    --color-white: #fff;
 }
+
+div, section, header, footer, p, h1, h2, h3 { box-sizing: border-box; }
+
+img { width: 100%; }
 
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    font-family: 'Pretendard'
-}
-
-.global-width {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    font-size: 16px;
+    background-color: #f5f5f7;
 }
 
 header {
-    font-weight: 700;
+    width: 100%;
+    position: absolute;
+}
+
+.test {
+    height: 60px;
+    position: relative;
+    text-align: center;
+}
+
+#logo{
+    width: 100%; /* 로고 가운데 정렬 */
+    font-weight: 900;
+    z-index: 999;
+    position: absolute;
 }
 
 .section {
@@ -33,33 +47,278 @@ header {
     justify-content: center;
 }
 
-.img-container {
+#img-container {
     width: 100%;
+    height: max-content;
+    background-color: #000;
+    /* background-image: url(../img/photo-1619777709778-f2629bc94a6c.avif); */
 }
 
-img {
-    width: 100vw;
-    display: block;
+#logo {
+    color: var(--color-white);
+    /* display: inline-block; */
+    font-weight: 700;
+}
 
+#mainImage {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    filter: brightness(70%);
+    /* margin: 0 auto; */
+    object-fit: cover;
 }
 
 #main-title {
-    transform: translate(50%, 50%);
-    top: 50%;
-    left: 50%;
+    /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 60%;
+    box-sizing: border-box;
     font-weight: 800;
+    position: absolute;
+    display: inline-block;
+    cursor: default;
+}
+
+#main-title span {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 15rem;
+    transition: 1s;
+}
+
+/* #main-title span:hover {
+    color: var(--color-white);
+    font-size: 13rem;
+} */
+
+
+
+.global-width {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.main-module-container { margin: 6vw 0 2vw; }
+
+.headline {
+    margin: 50px 0 30px;
+    font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.card-wrapper {
+    display: flex;
+    /* 요소 사이 간격 맞춤 (양 끝 무시)*/
+    justify-content: space-between;
+}
+
+.main-city-card {
+    width: 400px;
+    height: 500px;
+    justify-content: space-around;
+    padding: 32px 24px;
+    /* background-color: bisque; */
+    border-radius: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform ease-out .2s;
+    cursor: pointer;
+}
+
+.main-city-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.main-city-card:after,
+.fade{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.main-city-card:after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+  }
+
+  .main-city-card h2
+ {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+.main-city-card h2 {
+    line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+.main-city-card p {
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    top: 50%;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+  .main-city-card:after,
+  .main-city-card.after {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .main-city-card:hover h2,
+  .main-city-card.hover h2,
+  .main-city-card:hover p,
+  .main-city-card.hover p{
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.main-city-card:after,
+.fade {
     position: absolute;
 }
 
-#main-title p {
-    color: #fff;
-    font-size: 7rem;
+.fade {
+    z-index: 1;
+    padding: 40px;
+  }
+
+.fade h2{
+    color:white;
 }
 
-#headline {
-    font-size: 2rem;
+.fade p{
+    color:white;
+    font-size: 15px;
 }
 
-#subtitle {
-    font-size: 2rem;
+
+
+#cardSeoul {
+    background-image: url('../img/photo-1597548898542-78eeb7bfaf40.avif');
+}
+#cardGyeonggi {
+    background-image: url('../img/photo-1569225148599-aa8dca351c37.avif');
+}
+#cardSokcho {
+    background-image: url('../img/photo-1660782558359-652078942ad1.avif');
+}
+#cardBusan {
+    background-image: url('../img/photo-1601561831532-6870badf3e29.avif');
+}
+
+.main-city-card-title {
+    /*텍스트 default 여백 없앰*/
+    margin: 0 0 8px; 
+    font-size: 2rem ;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-city-card-desc {
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+.list-container {
+    width: max-content;
+}
+
+#listElement {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 12px 30px;
+    border: 0.0625rem solid #D7E2EB;
+}
+
+.auction-row {
+    cursor: pointer;
+    width: 60vw;
+    /* ::marker 없앰 */
+    list-style: none;
+    border-bottom: solid 1px #cecece;
+}
+.auction-row:nth-last-child(1) { border: none; }
+
+.auctionID, .auctionAddress { margin: 0; }
+
+.auctionID {
+    font-size: 1.2rem;
+    /*font-weight: bold;*/
+    margin: 15px 0 5px;
+}
+
+.auctionAddress {
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+.tag-container { display: flex; }
+
+.tag {
+    width: 75px;
+    height: 40px; /* 16 x 2.5(rem) = 40 */
+    margin: 0 5px 0;
+    background-color: #DCE3E8;
+    border-radius: 40px;
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+}
+
+.tag-name {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    border-top: #cecece 1px solid;
+}
+
+.sort-by {
+    justify-content: flex-end;
+    /* 오른쪽 정렬 */
+    margin: auto 0 0 auto;
+}
+
+select {
+    height: 40px;
+
+    font-size: 1rem;
+    color: #444;
+    background-color: #fff;
+
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    margin: 0;
+
+    border: 1px solid #aaa;
+    border-radius: 2rem;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.main-title-element {
+    width: max-content;
+    position: absolute;
 }
