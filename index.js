@@ -42,3 +42,50 @@ function changeTag(selectedTag) {
 }
 
 loadCity('seoul');
+
+// const hover = document.getElementById('seoul');
+// hover.addEventListener('mouseover', () => {
+//     document.getElementById('img-container').style.backgroundImage = "url('img/photo-1597548898542-78eeb7bfaf40.avif')";
+//     this.innerHTML = "test";
+// })
+
+const titleSeoul = document.getElementById('seoul');
+const titleGyeonggi = document.getElementById('gyeonggi');
+const titleSokcho = document.getElementById('sokcho');
+const titleBusan = document.getElementById('busan');
+
+let arr = [titleSeoul, titleGyeonggi, titleSokcho, titleBusan];
+let img = ["url('img/photo-1554310603-d39d43033735.avif')", "url('img/photo-1619777709778-f2629bc94a6c.avif')", "url('img/photo-1660785462445-f9d21cad7ada.avif')", "url('img/photo-1541055575455-df3a497caa48.avif')"];
+
+function onTitle(index) {
+    arr[index].style.color = "#fff";
+    arr[index].style.zIndex = "999";
+    document.getElementById('img-container').style.background = img[index];
+}
+
+function offTitle(index) {
+    arr[index].style.color = "rgba(255, 255, 255, 0.1)";
+    document.getElementById('img-container').style.background = "#000";
+}
+
+function sleep(ms) {
+    return new Promise((r) => setTimeout(r, ms));
+}
+
+let index = 0;
+
+function check_index_and_reset(){
+    if (index >= 3){
+        index = 0;
+    }
+    else{
+        index += 1;
+    }
+}
+
+setInterval(() => {
+    onTitle(index);
+    sleep(3000)
+        .then(() => offTitle(index))
+        .then(() => check_index_and_reset())
+}, 5000);

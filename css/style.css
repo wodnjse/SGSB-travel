@@ -31,7 +31,7 @@ header {
 }
 
 #logo{
-    width: 100%;
+    width: 100%; /* 로고 가운데 정렬 */
     font-weight: 900;
     z-index: 999;
     position: absolute;
@@ -47,9 +47,11 @@ header {
     justify-content: center;
 }
 
-.img-container {
+#img-container {
     width: 100%;
     height: max-content;
+    background-color: #000;
+    /* background-image: url(../img/photo-1619777709778-f2629bc94a6c.avif); */
 }
 
 #logo {
@@ -70,8 +72,8 @@ header {
 #main-title {
     /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
     transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 60%;
     box-sizing: border-box;
     font-weight: 800;
     position: absolute;
@@ -80,19 +82,17 @@ header {
 }
 
 #main-title span {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 7rem;
-    transition: 0.8s;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 15rem;
+    transition: 1s;
 }
 
-#main-title span:hover {
+/* #main-title span:hover {
     color: var(--color-white);
-    font-size: 10rem;
-}
+    font-size: 13rem;
+} */
 
-#seoul:hover section > .img-container img{
-    background: url(../img/photo-1578037571214-25e07ed4a487.avif);
-}
+
 
 .global-width {
     max-width: 1700px;
@@ -238,4 +238,9 @@ select {
     border: 1px solid #aaa;
     border-radius: 2rem;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.main-title-element {
+    width: max-content;
+    position: absolute;
 }
