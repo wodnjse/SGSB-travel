@@ -32,9 +32,11 @@ header {
 
 #logo{
     width: 100%; /* 로고 가운데 정렬 */
-    font-weight: 900;
+    font-weight: 200;
     z-index: 999;
     position: absolute;
+    color: var(--color-white);
+    /* display: inline-block; */
 }
 
 .section {
@@ -49,15 +51,15 @@ header {
 
 #img-container {
     width: 100%;
-    height: max-content;
+    height: 100vh;
     background-color: #000;
+    display: block;
+    filter: brightness(70%);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    /*background-size: cover;*/
     /* background-image: url(../img/photo-1619777709778-f2629bc94a6c.avif); */
-}
-
-#logo {
-    color: var(--color-white);
-    /* display: inline-block; */
-    font-weight: 700;
 }
 
 #mainImage {
@@ -65,15 +67,14 @@ header {
     height: 100vh;
     display: block;
     filter: brightness(70%);
-    /* margin: 0 auto; */
     object-fit: cover;
 }
 
 #main-title {
     /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
     transform: translate(-50%, -50%);
-    top: 60%;
-    left: 60%;
+    top: 55%;
+    left: 65%;
     box-sizing: border-box;
     font-weight: 800;
     position: absolute;
@@ -82,8 +83,8 @@ header {
 }
 
 #main-title span {
-    color: rgba(255, 255, 255, 0.1);
-    font-size: 15rem;
+    color: rgba(255, 255, 255, 0);
+    font-size: 20rem;
     transition: 1s;
 }
 
@@ -243,4 +244,11 @@ select {
 .main-title-element {
     width: max-content;
     position: absolute;
+}
+
+.main-title-element {
+    color: rgba(0, 0, 0, 0);
+    font-size: 20rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
 }
