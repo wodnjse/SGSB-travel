@@ -19,9 +19,22 @@ html, body {
     background-color: #f5f5f7;
 }
 
-#logo{
-    font-weight: 900;
+header {
+    width: 100%;
+    position: absolute;
+}
+
+.test {
+    height: 60px;
+    position: relative;
     text-align: center;
+}
+
+#logo{
+    width: 100%;
+    font-weight: 900;
+    z-index: 999;
+    position: absolute;
 }
 
 .section {
@@ -39,15 +52,6 @@ html, body {
     height: max-content;
 }
 
-#main-header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    /* border-bottom: #fff 1px solid; */
-}
-
 #logo {
     color: var(--color-white);
     /* display: inline-block; */
@@ -60,6 +64,7 @@ html, body {
     display: block;
     filter: brightness(70%);
     /* margin: 0 auto; */
+    object-fit: cover;
 }
 
 #main-title {
