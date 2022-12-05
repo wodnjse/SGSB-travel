@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="https://code.jquery.com/jquery-latest.js"> </script>
+<body>
+    <section class="section">
+        <header class="header">
+            <div class="test">
+                <h1 id="logo">Baek's Company</h1>
+            </div>
+        </header>
+        <div class="img-container">
+            <img id="mainImage" src="img/photo-1554310603-d39d43033735.avif" type="image/avif" alt="">
+        </div>
+        <div id="main-title">
+            <span class="main-title-element" id="seoul">서</span>
+            <span class="main-title-element" id="gyeonggi">경</span>
+            <span class="main-title-element" id="sokcho">속</span>
+            <span class="main-title-element" id="busan">부</span>
+        </div>
+        <div class="global-width">  
+            <div class="main-module-container">
+                <h2 class="headline">국내 대표 여행지</h2>
+                <div class="card-wrapper">
+                    <div class="main-city-card" id="cardSeoul" onclick="on_pop_seoul()">
+                        <h3 class="main-city-card-title">서울</h3>
+                        <div class="main-city-card-desc">한국의 심장</div>
+                    </div>
+                    <div id = "seoulModal" class="modal" > <!--여기서부터 팝업 시작-->
+                        <div class="modal-content">
+                            <h2>서울</h2>
+                            <p style = "text-align:center;">
+                                서울특별시(서울特別市)는 대한민국의 수도이자 최대 도시이다. 백제의 첫 수도인 위례성이었고, 고려의 남경(南京)이었으며, 한성부(漢城府)가 조선의 수도가 된 이후 현재까지 대한민국 정치·경제·사회·문화의 중심지이다.
+                            </p>
+                            <div style="text-align: center;">
+                                <button onclick="close_pop_seoul()">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-city-card" id="cardGyeonggi" onclick="on_pop_gyeonggi()">
+                        <h3 class="main-city-card-title" >경기</h3>
+                        <div class="main-city-card-desc">시작합니다!</div>
+                    </div>
+                    <div id = "gyeonggiModal" class="modal">
+                        <div class="modal-content">
+                            <p>경기</p>
+                            <button onclick="close_pop_gyeonggi()">닫기</button>
+                        </div>
+                    </div>
+                    <div class="main-city-card" id="cardSokcho" onclick="on_pop_sokcho()">
+                        <h3 class="main-city-card-title">속초</h3>
+                        <div class="main-city-card-desc">자연 그대로의 아름다움</div>
+                    </div>
+                    <div id = "sokchoModal" class="modal">
+                        <div class="modal-content">
+                            <p>속초</p>
+                            <button onclick="close_pop_sokcho()">닫기</button>
+                        </div>
+                    </div>
+                    <div class="main-city-card" id="cardBusan" onclick="on_pop_busan()">
+                        <h3 class="main-city-card-title">부산</h3>
+                        <div class="main-city-card-desc">바다의 도시</div>
+                    </div>
+                    <div id = "busanModal" class="modal">
+                        <div class="modal-content">
+                            <p>부산</p>
+                            <button onclick="close_pop_busan()">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="headline"> 대표 명소</h2>
+            <div class="list-container">
+                <div class="tag-container">
+                    <div class="tag" id="tagSeoul" onclick="loadCity('seoul')">
+                        <div class="tag-name">서울</div>
+                    </div>
+                    <div class="tag" id="tagGyeonggi" onclick="loadCity('gyeonggi')">
+                        <div class="tag-name">경기</div>
+                    </div>
+                    <div class="tag" id="tagSokcho" onclick="loadCity('sokcho')">
+                        <div class="tag-name">속초</div>
+                    </div>
+                    <div class="tag" id="tagBusan" onclick="loadCity('busan')">
+                        <div class="tag-name">부산</div>
+                    </div>
+                    <div class="sort-by">
+                        <select name="sort">
+                            <option value="" selected>별점순</option>
+                        </select>
+                    </div>
+                </div>
+                <ul id="listElement">
+                </ul>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
