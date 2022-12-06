@@ -136,6 +136,56 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+.main-city-card h2 {
+    width: 100%;
+  margin: 5px 0;
+  padding: 0;
+    line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1.4em;
+  opacity: 0;
+}
+.main-city-card p {
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    top: 50%;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+
+  .main-city-card:hover h2,
+  .main-city-card:hover p{
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.fade:hover{
+    border-radius: 16px;
+    background: #000000c3;
+}
+
+.fade {
+    padding: 32px 24px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -100px;
+    margin-left: -25px;
+  }
+
+.fade h2{
+    color:white;
+}
+
+.fade p{
+    color:white;
+    font-size: 15px;
+}
+
 #cardSeoul {
     background-image: url('../img/photo-1597548898542-78eeb7bfaf40.avif');
 }
@@ -231,14 +281,11 @@ footer {
 
 select {
     height: 40px;
-
     font-size: .9rem;
     color: #444;
     background-color: #fff;
-
     padding: 0.6em 1.4em 0.5em 0.8em;
     margin: 0;
-
     border: 1px solid #aaa;
     border-radius: 2rem;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
