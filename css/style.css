@@ -118,7 +118,7 @@ header {
     width: 400px;
     height: 500px;
     justify-content: space-around;
-    padding: 32px 24px;
+    padding-top: 24px;
     /* background-color: bisque; */
     border-radius: 16px;
     background-size: 100%;
@@ -129,34 +129,35 @@ header {
     cursor: pointer;
 }
 
+.main-city-card-title{
+    padding-left: 32px
+}
+.main-city-card-desc{
+    padding-left: 32px
+}
+
+.main-city-card-title {
+    /*텍스트 default 여백 없앰*/
+    margin: 0 0 8px; 
+    font-size: 2rem ;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-city-card-desc {
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
 .main-city-card:hover {
     transform: scale(1.02);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.main-city-card:after,
-.fade{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.main-city-card:after {
-    content: '';
-    background-color: rgba(0, 0, 0, 0.8);
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease;
-    opacity: 0;
-  }
-
-  .main-city-card h2
- {
-  width: 100%;
+.main-city-card h2 {
+    width: 100%;
   margin: 5px 0;
   padding: 0;
-}
-.main-city-card h2 {
     line-height: 1.1em;
   font-weight: 700;
   font-size: 1.4em;
@@ -172,15 +173,6 @@ header {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
-  .main-city-card:after,
-  .main-city-card.after {
-    opacity: 1;
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-  }
 
   .main-city-card:hover h2,
   .main-city-card.hover h2,
@@ -191,14 +183,18 @@ header {
   opacity: 1;
 }
 
-.main-city-card:after,
-.fade {
-    position: absolute;
+.fade:hover{
+    border-radius: 16px;
+    background: #000000c3;
 }
 
 .fade {
+    padding: 32px 24px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
     z-index: 1;
-    padding: 40px;
+    margin-top: -92px;
   }
 
 .fade h2{
@@ -223,19 +219,6 @@ header {
 }
 #cardBusan {
     background-image: url('../img/photo-1601561831532-6870badf3e29.avif');
-}
-
-.main-city-card-title {
-    /*텍스트 default 여백 없앰*/
-    margin: 0 0 8px; 
-    font-size: 2rem ;
-    font-weight: 700;
-    color: var(--color-white);
-}
-
-.main-city-card-desc {
-    font-size: 1.2rem;
-    color: var(--color-white);
 }
 
 .list-container {
