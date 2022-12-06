@@ -67,7 +67,7 @@ header {
     display: block;
     filter: brightness(70%);
     object-fit: cover;
-    transition: all 3s;
+    transition: all 1s;
     opacity: 1;
 }
 
@@ -86,7 +86,7 @@ header {
 #main-title span {
     color: rgba(255, 255, 255, 0);
     font-size: 20rem;
-    transition: 1s;
+    transition: 2s;
 }
 
 /* #main-title span:hover {
@@ -119,12 +119,14 @@ header {
 .main-city-card {
     width: 400px;
     height: 500px;
+    position: relative;
     justify-content: space-around;
     padding: 32px 24px;
     /* background-color: bisque; */
     border-radius: 16px;
     background-size: 100%;
     background-repeat: no-repeat;
+    overflow: hidden;
     /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: transform ease-out .2s;
@@ -136,55 +138,48 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.main-city-card h2 {
-    width: 100%;
-  margin: 5px 0;
-  padding: 0;
-    line-height: 1.1em;
-  font-weight: 700;
-  font-size: 1.4em;
-  opacity: 0;
-}
-.main-city-card p {
-    font-size: 0.8em;
-    font-weight: 300;
-    letter-spacing: 1px;
-    opacity: 0;
-    top: 50%;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
-  }
-
-  .main-city-card:hover h2,
-  .main-city-card:hover p{
-  -webkit-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  opacity: 1;
-}
-
-.fade:hover{
-    border-radius: 16px;
-    background: #000000c3;
-}
-
 .fade {
-    padding: 32px 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 42px;
     position: absolute;
-    z-index: 1;
-    margin-top: -100px;
-    margin-left: -25px;
-  }
-
-.fade h2{
-    color:white;
+    justify-content: center;
+    opacity: 0;
 }
 
-.fade p{
-    color:white;
-    font-size: 15px;
+.fade:hover {
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
 }
+
+/* hover의 반대 (js- addEventListner mouseout) */
+.fade:not(:hover) {
+    transition: .7s;
+}
+
+.fade-title,
+.fade-desc {
+    color: var(--color-white);
+    text-align: left;
+}
+
+.fade-title {
+    font-size: 1.3rem;
+}
+
+.fade-desc {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    word-break: keep-all;
+}
+
+
 
 #cardSeoul {
     background-image: url('../img/photo-1597548898542-78eeb7bfaf40.avif');
