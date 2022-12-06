@@ -90,4 +90,4 @@ setInterval(() => {
     sleep(3500)
         .then(() => offTitle(index))
         .then(() => check_index_and_reset())
-}, 5000);
+}, 6000);
