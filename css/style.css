@@ -8,7 +8,9 @@
 
 div, section, header, footer, p, h1, h2, h3 { box-sizing: border-box; }
 
-img { width: 100%; }
+img {
+    width: 100%;
+}
 
 html, body {
     margin: 0;
@@ -55,9 +57,6 @@ header {
     background-color: #000;
     display: block;
     filter: brightness(70%);
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-size: cover;
     /*background-size: cover;*/
     /* background-image: url(../img/photo-1619777709778-f2629bc94a6c.avif); */
 }
@@ -68,6 +67,8 @@ header {
     display: block;
     filter: brightness(70%);
     object-fit: cover;
+    transition: all 3s;
+    opacity: 1;
 }
 
 #main-title {
@@ -251,4 +252,14 @@ select {
     font-size: 20rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+}
+
+#black{
+    position: absolute;
+    background: black;
+    z-index: 999;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
 }
