@@ -97,7 +97,7 @@ header {
 
 
 .global-width {
-    max-width: 1700px;
+    max-width: 1176px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -111,20 +111,27 @@ header {
 }
 
 .card-wrapper {
-    display: flex;
+    display: grid;
     /* 요소 사이 간격 맞춤 (양 끝 무시)*/
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(2, 2fr);
 }
 
 .main-city-card {
-    width: 400px;
-    height: 500px;
+    width: 565px;
+    height: 300px;
     position: relative;
     justify-content: space-around;
     padding: 32px 24px;
     /* background-color: bisque; */
-    border-radius: 16px;
+    border-radius: 2.2rem;
     background-size: 100%;
+    /* background-position: 50%;  background-image 위치 조정 */
     background-repeat: no-repeat;
     overflow: hidden;
     /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
@@ -142,8 +149,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 500px;
+    width: 565px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     padding: 42px;
@@ -179,18 +186,20 @@ header {
     word-break: keep-all;
 }
 
-
-
 #cardSeoul {
+    background-position: 0 80%;
     background-image: url('../img/photo-1597548898542-78eeb7bfaf40.avif');
 }
 #cardGyeonggi {
+    background-position: 0 50%;
     background-image: url('../img/photo-1569225148599-aa8dca351c37.avif');
 }
 #cardSokcho {
+    background-position: 0 40%;
     background-image: url('../img/photo-1660782558359-652078942ad1.avif');
 }
 #cardBusan {
+    background-position: 0 80%;
     background-image: url('../img/photo-1601561831532-6870badf3e29.avif');
 }
 
@@ -208,7 +217,7 @@ header {
 }
 
 .list-container {
-    width: max-content;
+    width: 100%;
 }
 
 #listElement {
@@ -220,7 +229,7 @@ header {
 
 .auction-row {
     cursor: pointer;
-    width: 60vw;
+    /* width: 60vw; */
     /* ::marker 없앰 */
     list-style: none;
     border-bottom: solid 1px #cecece;
