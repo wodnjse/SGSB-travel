@@ -1,5 +1,5 @@
 function getCityData(city) {
-    fetch(`http://localhost:8000/data/${city}`) // 해당 주소의 api를 불러옴
+    fetch(`http://ec2-3-36-70-155.ap-northeast-2.compute.amazonaws.com:8000/data/${city}`) // 해당 주소의 api를 불러옴
         .then((response) => response.json()) // 불러온 api 값을 response로 받고 response값을 json으로 리턴 한다.
         .then((data) => { //그 값이 data라는 변수에 json array 형태로 들어감
             let num = 1;
