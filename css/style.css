@@ -137,7 +137,6 @@ header {
     /*box-shadow: inset 10px rgba(0, 0, 0, 0.8);*/
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: transform ease-out .2s;
-    cursor: pointer;
 }
 
 .main-city-card:hover {
@@ -150,17 +149,17 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 565px;
-    height: 820px;
+    height: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 42px;
     position: absolute;
-    justify-content: center;
     opacity: 0;
 }
 
 .fade:hover {
-    transition: .5s;
+    transition: .3s;
     background: rgba(0, 0, 0, 0.8);
     opacity: 1;
 }
@@ -223,32 +222,98 @@ header {
 #listElement {
     background-color: #fff;
     border-radius: 1rem;
-    padding: 12px 30px;
+    padding: 12px 16px;
     border: 0.0625rem solid #D7E2EB;
 }
 
 .auction-row {
+    padding: 16px 12px 12px;
     cursor: pointer;
     /* width: 60vw; */
     /* ::marker 없앰 */
     list-style: none;
-    border-bottom: solid 1px #cecece;
+    /* border-bottom: solid 1px #cecece; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
 }
-.auction-row:nth-last-child(1) { border: none; }
+/* .auction-row:nth-child(1) { height: 100px; } */
+.auction-row:hover {
+    background-color: antiquewhite;
+}
+
+.restaurant-wrapper{
+    width: 1110px;
+    height: 71px;
+    position: absolute;
+    /* background-color: aqua; */
+    /* opacity: .2; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.restaurant-wrapper:hover {
+    transition: .5s;
+    background-color: #ff7100;
+    opacity: 1;
+}
+.restaurant-wrapper:hover .find-restaurant {
+    transition: .5s;
+    opacity: 1;
+}
+.restaurant-wrapper:not(:hover) {
+    transition: .3s;
+}
+
+.find-restaurant {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 0;
+}
+.find-restaurant:hover {
+    opacity: 1;
+}
 
 .auctionID, .auctionAddress { margin: 0; }
 
 .auctionID {
     font-size: 1.2rem;
     /*font-weight: bold;*/
-    margin: 16px 0 5px;
+    /* margin: 16px 0 5px; */
 }
 
 .auctionAddress {
-    margin: 0 0 12px;
+    /* margin: 0 0 12px; */
     font-size: .9em;
     color: #808080;
     font-weight: 300;
+}
+
+.list-number-wrapper {
+    margin-right: 24px; 
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-number {
+    /* position: absolute; */
+    font-size: 2rem;
+}
+
+.solid-line {
+    margin: 0 auto;
+    /* width: 1500px; */
+    border: 0px;
+    border-top: 1px solid #cecece;
+}
+.solid-line:nth-last-of-type(1) {
+    display: none;
 }
 
 .tag-container { display: flex; }
