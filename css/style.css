@@ -6,95 +6,120 @@
     --color-white: #fff;
 }
 
-div, section, header, footer, p, h1, h2, h3 { box-sizing: border-box; }
-
-img {
-    width: 100%;
+div,
+section,
+header,
+footer,
+p,
+h1,
+h2,
+h3 {
+    box-sizing: border-box;
 }
 
+img { width: 100%; }
+
 html, body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     background-color: #f5f5f7;
 }
 
-header {
+.section {
+    position: relative;
     width: 100%;
-    position: absolute;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
 }
 
-.test {
-    height: 60px;
+header {
+    position: absolute;
+    width: 100%;
+}
+
+.logo-wrapper {
     position: relative;
+    height: 60px;
     text-align: center;
 }
 
 #logo{
+    position: absolute;
     width: 100%; /* 로고 가운데 정렬 */
     font-weight: 200;
     z-index: 999;
-    position: absolute;
     color: var(--color-white);
+    cursor: default;
     /* display: inline-block; */
 }
 
-.section {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
-}
-
 #img-container {
+    display: block;
     width: 100%;
     height: 100vh;
     background-color: #000;
-    display: block;
     filter: brightness(70%);
     /*background-size: cover;*/
     /* background-image: url(../img/photo-1619777709778-f2629bc94a6c.avif); */
 }
 
+#black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 999;
+    opacity: 1;
+    transition: all 3s;
+}
+
 #mainImage {
+    display: block;
     width: 100%;
     height: 100vh;
-    display: block;
     filter: brightness(70%);
     object-fit: cover;
     transition: all 1s;
     opacity: 1;
 }
 
-#main-title {
-    /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
-    transform: translate(-50%, -50%);
+#mainTitle {
+    display: inline-block;
+    position: absolute;
     top: 55%;
     left: 65%;
+    /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     font-weight: 800;
-    position: absolute;
-    display: inline-block;
     cursor: default;
 }
 
-#main-title span {
+#mainTitle span {
     color: rgba(255, 255, 255, 0);
     font-size: 20rem;
     transition: 2s;
+}
+
+.main-title-element {
+    position: absolute;
+    width: max-content;
+    color: rgba(0, 0, 0, 0);
+    font-size: 20rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
 }
 
 /* #main-title span:hover {
     color: var(--color-white);
     font-size: 13rem;
 } */
-
-
 
 .global-width {
     max-width: 1176px;
@@ -123,14 +148,14 @@ header {
 }
 
 .main-city-card {
+    position: relative;
     width: 565px;
     height: 300px;
-    position: relative;
-    justify-content: space-around;
     padding: 32px 24px;
-    /* background-color: bisque; */
     border-radius: 2.2rem;
     background-size: 100%;
+    justify-content: space-around;
+    /* background-color: bisque; */
     /* background-position: 50%;  background-image 위치 조정 */
     background-repeat: no-repeat;
     overflow: hidden;
@@ -144,17 +169,30 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+.main-city-card-title {
+    /*텍스트 default 여백 없앰*/
+    margin: 0 0 8px; 
+    font-size: 2rem ;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.main-city-card-desc {
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
 .fade {
+    display: flex;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 565px;
     height: 300px;
-    display: flex;
+    padding: 42px;
+    transform: translate(-50%, -50%);
     flex-direction: column;
     justify-content: center;
-    padding: 42px;
-    position: absolute;
     opacity: 0;
 }
 
@@ -173,16 +211,30 @@ header {
 .fade-desc {
     color: var(--color-white);
     text-align: left;
+    cursor: default;
 }
 
-.fade-title {
-    font-size: 1.3rem;
-}
+.fade-title { font-size: 1.3rem; }
 
 .fade-desc {
     line-height: 1.8rem;
     font-size: 1rem;
     word-break: keep-all;
+}
+
+.list-container { width: 100%; }
+
+.tag-container { display: flex; }
+
+.tag {
+    position: relative;
+    width: 75px;
+    height: 40px; /* 16 x 2.5(rem) = 40 */
+    margin: 0 5px 0;
+    border-radius: 40px;
+    background-color: #DCE3E8;
+    appearance: none;
+    cursor: pointer;
 }
 
 #cardSeoul {
@@ -202,53 +254,45 @@ header {
     background-image: url('../img/photo-1601561831532-6870badf3e29.avif');
 }
 
-.main-city-card-title {
-    /*텍스트 default 여백 없앰*/
-    margin: 0 0 8px; 
-    font-size: 2rem ;
-    font-weight: 700;
-    color: var(--color-white);
+.tag-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.main-city-card-desc {
-    font-size: 1.2rem;
-    color: var(--color-white);
+.sort-by {
+    margin: auto 0 0 auto;
+    justify-content: flex-end;
+    /* 오른쪽 정렬 */
 }
 
-.list-container {
-    width: 100%;
+select {
+    height: 40px;
+    margin: 0;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    border: 1px solid #aaa;
+    border-radius: 2rem;
+    font-size: .9rem;
+    color: #444;
+    background-color: #fff;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
 }
 
 #listElement {
-    background-color: #fff;
-    border-radius: 1rem;
     padding: 12px 16px;
     border: 0.0625rem solid #D7E2EB;
-}
-
-.auction-row {
-    padding: 16px 12px 12px;
-    cursor: pointer;
-    /* width: 60vw; */
-    /* ::marker 없앰 */
-    list-style: none;
-    /* border-bottom: solid 1px #cecece; */
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-}
-/* .auction-row:nth-child(1) { height: 100px; } */
-.auction-row:hover {
-    background-color: antiquewhite;
+    border-radius: 1rem;
+    background-color: #fff;
 }
 
 .restaurant-wrapper{
+    display: flex;
+    position: absolute;
     width: 1110px;
     height: 71px;
-    position: absolute;
     /* background-color: aqua; */
     /* opacity: .2; */
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -277,26 +321,23 @@ header {
     opacity: 1;
 }
 
-.auctionID, .auctionAddress { margin: 0; }
-
-.auctionID {
-    font-size: 1.2rem;
-    /*font-weight: bold;*/
-    /* margin: 16px 0 5px; */
-}
-
-.auctionAddress {
-    /* margin: 0 0 12px; */
-    font-size: .9em;
-    color: #808080;
-    font-weight: 300;
+.tourist-attraction-list {
+    display: flex;
+    padding: 16px 12px 12px;
+    cursor: pointer;
+    /* width: 60vw; */
+    /* ::marker 없앰 */
+    list-style: none;
+    /* border-bottom: solid 1px #cecece; */
+    flex-direction: row;
+    /* justify-content: center; */
 }
 
 .list-number-wrapper {
-    margin-right: 24px; 
+    display: flex;
     width: fit-content;
     height: fit-content;
-    display: flex;
+    margin-right: 24px; 
     flex-direction: column;
     justify-content: center;
 }
@@ -306,78 +347,32 @@ header {
     font-size: 2rem;
 }
 
+.tourist-attraction-ID, 
+.tourist-attraction-StarRating { margin: 0; }
+
+.auctionIDtourist-attraction-ID {
+    font-size: 1.2rem;
+    /*font-weight: bold;*/
+    /* margin: 16px 0 5px; */
+}
+
+.tourist-attraction-StarRating {
+    /* margin: 0 0 12px; */
+    font-size: .9em;
+    color: #808080;
+    font-weight: 300;
+}
+
 .solid-line {
     margin: 0 auto;
     /* width: 1500px; */
     border: 0px;
     border-top: 1px solid #cecece;
 }
-.solid-line:nth-last-of-type(1) {
-    display: none;
-}
-
-.tag-container { display: flex; }
-
-.tag {
-    width: 75px;
-    height: 40px; /* 16 x 2.5(rem) = 40 */
-    margin: 0 5px 0;
-    background-color: #DCE3E8;
-    border-radius: 40px;
-    position: relative;
-    appearance: none;
-    cursor: pointer;
-}
-
-.tag-name {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
+.solid-line:nth-last-of-type(1) { display: none; }
 
 footer {
     width: 100%;
     height: 400px;
     border-top: #cecece 1px solid;
-}
-
-.sort-by {
-    justify-content: flex-end;
-    /* 오른쪽 정렬 */
-    margin: auto 0 0 auto;
-}
-
-select {
-    height: 40px;
-    font-size: .9rem;
-    color: #444;
-    background-color: #fff;
-    padding: 0.6em 1.4em 0.5em 0.8em;
-    margin: 0;
-    border: 1px solid #aaa;
-    border-radius: 2rem;
-    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-}
-
-.main-title-element {
-    width: max-content;
-    position: absolute;
-}
-
-.main-title-element {
-    color: rgba(0, 0, 0, 0);
-    font-size: 20rem;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
-}
-
-#black{
-    position: absolute;
-    background: black;
-    z-index: 999;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    transition: all 3s;
 }
