@@ -96,3 +96,11 @@ setInterval(() => {
         .then(() => offTitle(index))
         .then(() => check_index_and_reset())
 }, 6000);
+
+const scrollTop = document.getElementById('scrollTop');
+scrollTop.addEventListener('click', () => {
+    const scrollPosition = document.getElementById('touristAttraction').offsetTop;  // offsetTop: 화면 최상단으로부터의 픽셀값
+    // 화면 최상단에서부터 1783px - 100px = 스크롤 시 상단에 100px 여백 주기
+    window.scrollTo({top: scrollPosition - 100, behavior: 'smooth'});  // behavior: smooth = 부드러운 스크롤 효과
+})
+

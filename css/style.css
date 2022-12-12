@@ -290,7 +290,7 @@ select {
     display: flex;
     position: absolute;
     width: 1110px;
-    height: 71px;
+    height: 66px;
     /* background-color: aqua; */
     /* opacity: .2; */
     justify-content: center;
@@ -366,10 +366,16 @@ select {
 .solid-line {
     margin: 0 auto;
     /* width: 1500px; */
-    border: 0px;
+    border: 0;
     border-top: 1px solid #cecece;
 }
 .solid-line:nth-last-of-type(1) { display: none; }
+
+nav#scrollTop {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
 
 footer {
     width: 100%;
