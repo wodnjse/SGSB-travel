@@ -2,7 +2,8 @@
 @import "fonts.css";
 
 :root {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', serif;
+    --font: 'Pretendard', serif;
     --color-white: #fff;
 }
 
@@ -204,7 +205,7 @@ header {
 
 /* hover의 반대 (js- addEventListner mouseout) */
 .fade:not(:hover) {
-    transition: .7s;
+    transition: .5s;
 }
 
 .fade-title,
@@ -268,15 +269,19 @@ header {
 }
 
 select {
+    /*-moz-appearance: none;*/
+    /*-webkit-appearance: none;*/
+    /*appearance: none;*/
     height: 40px;
     margin: 0;
-    padding: 0.6em 1.4em 0.5em 0.8em;
-    border: 1px solid #aaa;
+    padding: 0.6em 0.8em 0.5em 0.8em;
+    border: none;
     border-radius: 2rem;
+    font-family: var(--font);
     font-size: .9rem;
-    color: #444;
-    background-color: #fff;
-    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    /*color: #888;*/
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #listElement {
