@@ -45,10 +45,12 @@ function changeTag(selectedTag) {
 
     document.getElementById(selectedTag).style.backgroundColor = "#186ADE";
     document.getElementById(selectedTag).style.color = "#fff";
+    document.getElementById(selectedTag).style.fontWeight = "700";
 
     for (let tag of tagList) {
         document.getElementById(tag).style.backgroundColor = "#DCE3E8";
         document.getElementById(tag).style.color = "#000";
+        document.getElementById(tag).style.fontWeight = "normal";
     }
 }
 
