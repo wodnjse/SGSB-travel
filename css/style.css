@@ -353,11 +353,19 @@ select {
     align-items: center;
     cursor: pointer;
 }
+.restaurant-wrapper:first-of-type {
+    border-radius: 1rem 1rem 0 0;
+}
+/* why???? */
+.restaurant-wrapper:nth-last-of-type(2) {
+    border-radius: 0 0 1rem 1rem;
+}
 .restaurant-wrapper:hover {
     transition: .5s;
     background-color: #ff7100;
     opacity: 1;
 }
+
 .restaurant-wrapper:hover .find-restaurant {
     transition: .5s;
     opacity: 1;
@@ -436,7 +444,6 @@ nav#scrollTop {
 
 a.scroller {
     cursor: pointer;
-
 }
 
 footer {
