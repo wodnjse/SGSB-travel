@@ -106,3 +106,9 @@ scrollTop.addEventListener('click', () => {
     window.scrollTo({top: scrollPosition - 100, behavior: 'smooth'});  // behavior: smooth = 부드러운 스크롤 효과
 })
 
+selectName = document.getElementById('developer-name');
+selectName.addEventListener('click', () => {
+    let link = `https://github.com/wodnjse`;
+
+    window.location.href = link;
+})
