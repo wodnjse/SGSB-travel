@@ -106,9 +106,20 @@ scrollTop.addEventListener('click', () => {
     window.scrollTo({top: scrollPosition - 100, behavior: 'smooth'});  // behavior: smooth = 부드러운 스크롤 효과
 })
 
-selectName = document.getElementById('developer-name');
-selectName.addEventListener('click', () => {
-    let link = `https://github.com/wodnjse`;
+const className = document.querySelectorAll('.developer-name');
 
-    window.location.href = link;
+/**
+ * githubID에 따른 github프로필을 새 탭에서 볼 수 있게 함
+ * @param {string} githubID github아이디
+ */
+function linkGithub(githubID) {
+    window.open(`https://github.com/${githubID}`);
+}
+
+[].forEach.call(className, (element) => {
+    element.addEventListener('click', () => {
+        let className = element.classList[1];
+        className === 'developer-name-jaewon' ? linkGithub('wodnjse') : linkGithub('baekinwon');
+    })
+
 })

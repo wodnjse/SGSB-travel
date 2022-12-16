@@ -136,10 +136,11 @@ header {
     padding: 0;
 }
 .developer-name {
+    margin: 0 0 6px 0;
+    width: fit-content;
     list-style: none;
     font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 8px;
     color: rgba(255, 255, 255, 85%);
     /*display: inline-block;*/
     position: relative;
