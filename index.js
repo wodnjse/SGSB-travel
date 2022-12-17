@@ -119,7 +119,8 @@ function linkGithub(githubID) {
 [].forEach.call(className, (element) => {
     element.addEventListener('click', () => {
         let className = element.classList[1];
-        className === 'developer-name-jaewon' ? linkGithub('wodnjse') : linkGithub('baekinwon');
+        // className === 'developer-name-jaewon' ? linkGithub('wodnjse') : linkGithub('baekinwon');
+        linkGithub(className === 'developer-name-jaewon' ? 'wodnjse' : 'baekinwon');
     })
 
 })
