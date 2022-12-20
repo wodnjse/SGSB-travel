@@ -332,6 +332,7 @@ select {
 }
 
 .list-container {
+    /*position: relative;*/
     width: 100%;
 }
 
@@ -445,9 +446,48 @@ nav#scrollTop {
     padding: 0;
 }
 
-a.scroller {
+/*a.scroller {*/
+/*    cursor: pointer;*/
+/*}*/
+.floating-btn {
+    position: fixed;
+    display: flex;
+    width: fit-content;
+    height: 44px;
+    padding: 10px 20px;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%, 0);
+    justify-content : center;
+    align-items : center;
+    background-color: var(--color-white);
+    border: 2px solid #000;
+    border-radius: 100px;
+    transition: all .2s linear;
     cursor: pointer;
 }
+.floating-btn:hover {
+    background-color: #000;
+}
+.floating-btn:hover .btn-text {
+    color: var(--color-white);
+}
+.floating-btn:hover .material-symbols-outlined {
+    color: var(--color-white);
+}
+
+.material-symbols-outlined {
+    margin-right: 4px;
+}
+.btn-text {
+    padding-right: 4px;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    user-select: none;
+    align-items: center;
+}
+
 
 footer {
     width: 100%;
