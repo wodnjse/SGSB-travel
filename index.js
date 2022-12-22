@@ -129,7 +129,7 @@ addEventListener('scroll', () => {
         const test = document.getElementsByClassName('main-module-container')[0];
         test.insertAdjacentHTML('beforeend', `
             <div class="floating-btn" id="floatingButton">
-                <span class="material-symbols-outlined">arrow_upward</span>
+                <span class="material-symbols-outlined"></span>
                 <span class="btn-text">위로 올라가기</span>
             </div>
         `)
