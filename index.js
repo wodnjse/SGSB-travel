@@ -22,8 +22,8 @@ function getCityData(city) {
                 `); // 아이디로 가져온 값을 html 문으로 반복해서 뒤에 추가함
                 num++;  // 순위 증가
             });
+            AligningListNumberSpacing();
         });
-
 }
 
 function loadCity(city) {
@@ -147,4 +147,19 @@ addEventListener('scroll', () => {
         isVisible = false;
     }
 })
+
+/**
+ * 리스트 숫자의 width가 일정하지 않아 여행지명 간격이 맞춰지지 않는 오류
+ * .list-number의 width를 일정하게 설정하여 간격 맞춤
+ * @constructor
+ */
+function AligningListNumberSpacing() {
+    let listNumber = document.querySelectorAll('.list-number');
+    listNumber.forEach(nodeIndex => {
+        // 리스트 숫자의 width가 25px 미만이면 => width: 20px
+        if (nodeIndex.clientWidth < 25) nodeIndex.style.width = '20px';
+        // 그 외(width가 25px 이상) => width: 32px
+        else nodeIndex.style.width = '32px';
+    });
+}
 
