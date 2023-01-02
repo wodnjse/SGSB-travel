@@ -1,5 +1,5 @@
 # 🗺 SGSB-Travel
-![localhost_63342_WebstormProjects_SGSB-travel_index html__ijt=2o5ap04t1rods2l6j4e32hsq7g _ij_reload=RELOAD_ON_SAVE](https://user-images.githubusercontent.com/89503906/209137017-62bd76e5-48ee-437c-a9b8-ca71f08e84f4.png)
+![image](https://user-images.githubusercontent.com/89503906/210226145-a3aa5fec-eccb-4b86-8a22-aaa636511b14.png)
 
 > 고등학교에서 진행한 ```1팀 1기업 - 개발자 따라잡기``` 특강에 참여하여 배운 내용들을 바탕으로 팀원들과 진행한 최종 프로젝트입니다.
 > 
