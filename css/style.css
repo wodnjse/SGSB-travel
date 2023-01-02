@@ -29,6 +29,9 @@ html, body {
     background-color: #f5f5f7;
 }
 
+body{-ms-overflow-style:none; }
+body::-webkit-scrollbar { display:none; }
+
 .section {
     position: relative;
     width: 100%;
@@ -44,23 +47,6 @@ header {
     width: 100%;
 }
 
-.logo-wrapper {
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#logo{
-    width: fit-content;
-    margin: 0;
-    text-align: center;
-    font-weight: 200;
-    z-index: 100;
-    color: var(--color-white);
-    cursor: pointer;
-}
 
 #img-container {
     display: block;
@@ -119,26 +105,69 @@ header {
     font-size: 13rem;
 } */
 
-.team {
+.project-information {
     position: absolute;
-    top: 73.6%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 750px;
+    top: 7.313rem;  /* 177px */
     margin-left: 114px;
 }
-.team-developers {
-    margin-bottom: 40px;
+
+#teamName,
+#projectName,
+#introduction {
+    margin: 0;
 }
+
+#teamName {
+    margin-bottom: 1em;
+    color: rgba(255, 255, 255, 50%);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+#projectName{
+    margin-bottom: 20px ;
+    width: fit-content;
+    text-align: center;
+    font-weight: 700;
+    font-size: 4rem;
+    z-index: 100;
+    color: var(--color-white);
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+#introduction {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.position {
+}
+
+.inner-padding {
+    margin: 40px 0;
+    display: block;
+}
+
 .job-group {
-    margin: 0 0 8px 0 ;
+    margin: 0;
     color: rgba(255, 255, 255, 50%);
     font-weight: 300;
 }
-.team-developers > ul {
+
+.position > ul {
     margin: 0;
     padding: 0;
 }
+
 .developer-name {
-    margin: 0 0 6px 0;
+    margin: 0;
+    padding-top: 6px;
     width: fit-content;
     list-style: none;
     font-size: 1.125rem;
