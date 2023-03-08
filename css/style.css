@@ -76,15 +76,15 @@ header {
     object-fit: cover;
     transition: all 1s;
     opacity: 1;
+    /* background-size: cover; */
 }
 
 #mainTitle {
-    display: inline-block;
+    width: fit-content;
+    /* display: inline-block; */
     position: absolute;
-    top: 55%;
-    left: 65%;
     /* (50%, 50%) → (-50%, -50%) 가운데 정렬 */
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     box-sizing: border-box;
     font-weight: 800;
     cursor: default;
@@ -94,9 +94,8 @@ header {
     position: absolute;
     width: max-content;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
     color: rgba(255, 255, 255, 0);
-    font-size: 20rem;
     transition: 2s;
 }
 
@@ -110,7 +109,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 750px;
+    /* height: 10px; */
     top: 7.313rem;  /* 177px */
     /* margin-left: 10.556vw; */
 }
@@ -215,7 +214,7 @@ header {
     /* 요소 사이 간격 맞춤 (양 끝 무시)*/
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
+    /* width: 100%;  memo */
     box-sizing: border-box;
     column-gap: 10px;
     row-gap: 10px;
@@ -224,6 +223,7 @@ header {
 
 .main-city-card {
     position: relative;
+    background-size: cover; /*memo*/
     width: 100%;
     height: 300px;
     padding: 32px 24px;
@@ -262,8 +262,10 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 565px;
-    height: 300px;
+    /* width: 565px; */
+    width: 100%;
+    /* height: 300px; */
+    height: 100%;
     padding: 42px;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -315,18 +317,22 @@ header {
 }
 
 #cardSeoul {
+    background-size: cover;
     background-position: 0 80%;
     background-image: url('../img/photo-1597548898542-78eeb7bfaf40.avif');
 }
 #cardGyeonggi {
+    background-size: cover;
     background-position: 0 50%;
     background-image: url('../img/photo-1569225148599-aa8dca351c37.avif');
 }
 #cardSokcho {
+    background-size: cover;
     background-position: 0 40%;
     background-image: url('../img/photo-1660782558359-652078942ad1.avif');
 }
 #cardBusan {
+    background-size: cover;
     background-position: 0 80%;
     background-image: url('../img/photo-1601561831532-6870badf3e29.avif');
 }
@@ -524,44 +530,101 @@ footer {
     border-top: #cecece 1px solid;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 913px) {
     .project-information {
         margin-left: 10.556vw;
+        height: 80%;  /* 상하 위치 조정 */
+    }
+
+    #mainTitle {
+        top: 55%;
+        left: 65%;
+        font-size: 20rem;
     }
 }
 
 @media only screen and (max-width: 912px) {
 
+    .global-width {
+        /* width: 100%; */
+        margin: 0 auto;
+    }
+
+    .main-module-container {
+        /* margin: 0 auto;
+        box-sizing: border-box;
+        display: block; */
+    }
+
+    .headline {
+        /* width: 480px; */
+        /* margin: 25px auto; */
+    }
+
+    .team-developers {
+        text-align: center;
+    }
+    
+    .developer-name {
+        /* width: auto; */
+        margin: 0 auto;
+    }
+
+    .project-information {
+        height: 80%;  /* 상하 위치 조정 */
+    }
+
+    #mainTitle {
+        width: 330px;  /* width를 span 요소의 길이로 설정해야 transform 속성이 적용 됨. 이유는 모름.. */
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12rem;
+    }
+
     .card-wrapper {
-        width: 100%;
+        width: 480px;
         grid-template-columns: 1fr;
         grid-gap: 16px;
+        margin: 0 auto;
     }
 
     .main-city-card {
-        width: 100%;
+        margin: 0 auto;
+        /* width: calc(100% * 0.7); */
         height: 600px;
     }
+
+    .project-information{
+        /* position: absolute; */
+        width: 100%;
+    }
+
+    .project-introduction {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
 }
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 514px) { 
     .global-width {
         padding: 0;
     }
 
     #img-container {
         width: 100%;
-        height: 70%;
+        height: 120%;
     }
     
     .card-wrapper {
         grid-template-columns: 1fr;
         grid-gap: 16px;
         /* grid-row: 0; */
+        width: 100%;
     }
 
     .main-city-card {
-        width: 100%;
         height: 600px;
         border-radius: 0;
         padding: 0;
@@ -572,10 +635,26 @@ footer {
         width: 100%;
         align-items: center;
     }
+
+    #mainTitle {
+        width: 220px;  /* width를 span 요소의 길이로 설정해야 transform 속성이 적용 됨. 이유는 모름.. */
+        font-size: 8rem;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     
     .project-introduction {
         margin: 0 auto;
         text-align: center;
+    }
+    
+    .team-developers {
+        text-align: center;
+    }
+    
+    .developer-name {
+        margin: 0 auto;
     }
 
     .main-city-card-typo-wrapper {
@@ -598,4 +677,17 @@ footer {
     .fade {
         height: 600px;
     }
+
+    .main-module-container {
+        width: 100%
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    #main-image {
+        width: 100%;
+    }
+
 }
